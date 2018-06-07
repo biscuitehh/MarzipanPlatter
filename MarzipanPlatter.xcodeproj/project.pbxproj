@@ -12,6 +12,8 @@
 		DC00150420C8DA3700800182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC00150320C8DA3700800182 /* UIKit.framework */; };
 		DC00150920C8DBBD00800182 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC00150820C8DBBD00800182 /* MasterTableViewController.swift */; };
 		DC77847320C8F2B400E9CC6C /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */; };
+		DCD82F1920C9014B00C2E2A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */; };
+		DCD82F1B20C901AF00C2E2A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		DC252F5C20C8E34200FFEDEA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC252F5D20C8E36C00FFEDEA /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
 		DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Frameworks/MapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC00150420C8DA3700800182 /* UIKit.framework in Frameworks */,
+				DCD82F1B20C901AF00C2E2A7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +78,7 @@
 		DC00150220C8DA3700800182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */,
 				DC00150320C8DA3700800182 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -83,6 +89,7 @@
 			children = (
 				DC00150820C8DBBD00800182 /* MasterTableViewController.swift */,
 				DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */,
+				DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -159,6 +166,7 @@
 				DC0014F520C8D07600800182 /* AppDelegate.swift in Sources */,
 				DC77847320C8F2B400E9CC6C /* DetailTableViewController.swift in Sources */,
 				DC00150920C8DBBD00800182 /* MasterTableViewController.swift in Sources */,
+				DCD82F1920C9014B00C2E2A7 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,15 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        // Setup RootViewController & Window
-        let rootViewController = UITabBarController(nibName: nil, bundle: nil)
-        
+        // Master Detail setup
         let firstVC = MasterTableViewController.init(style: .plain)
         let firstNavVC = UINavigationController(rootViewController: firstVC)
         firstNavVC.tabBarItem = UITabBarItem(title: "Table View", image: nil, tag: 0)
 
-        rootViewController.viewControllers = [firstNavVC]
+        // Map setup
+        let secondVC = MapViewController.init(nibName: nil, bundle: nil)
+        secondVC.tabBarItem = UITabBarItem(title: "Map View", image: nil, tag: 0)
+
+        // Setup RootViewController
+        let rootViewController = UITabBarController(nibName: nil, bundle: nil)
+        rootViewController.viewControllers = [firstNavVC, secondVC]
         
+        // Setup Window & go go go
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
