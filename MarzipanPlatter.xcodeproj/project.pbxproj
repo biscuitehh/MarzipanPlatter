@@ -11,6 +11,7 @@
 		DC0014F720C8D07700800182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0014F620C8D07700800182 /* Assets.xcassets */; };
 		DC00150420C8DA3700800182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC00150320C8DA3700800182 /* UIKit.framework */; };
 		DC00150920C8DBBD00800182 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC00150820C8DBBD00800182 /* MasterTableViewController.swift */; };
+		DC77847320C8F2B400E9CC6C /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DC00150820C8DBBD00800182 /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		DC252F5C20C8E34200FFEDEA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC252F5D20C8E36C00FFEDEA /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
+		DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				DC00150820C8DBBD00800182 /* MasterTableViewController.swift */,
+				DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0014F520C8D07600800182 /* AppDelegate.swift in Sources */,
+				DC77847320C8F2B400E9CC6C /* DetailTableViewController.swift in Sources */,
 				DC00150920C8DBBD00800182 /* MasterTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

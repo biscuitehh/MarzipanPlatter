@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = UITabBarController(nibName: nil, bundle: nil)
         
         let firstVC = MasterTableViewController.init(style: .plain)
-        rootViewController.viewControllers = [firstVC]
+        let firstNavVC = UINavigationController(rootViewController: firstVC)
+        firstNavVC.tabBarItem = UITabBarItem(title: "Table View", image: nil, tag: 0)
+
+        rootViewController.viewControllers = [firstNavVC]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
