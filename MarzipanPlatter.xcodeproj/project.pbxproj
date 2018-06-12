@@ -210,7 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/Users/biscuit/Code/MarzipanPlatter/scripts/update-swift-frameworks.sh\n# ~/bin/jtool -L ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n";
+			shellScript = "${PROJECT_DIR}/scripts/update-swift-frameworks.sh\n# ~/bin/jtool -L ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
