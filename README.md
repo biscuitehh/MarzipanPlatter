@@ -1,6 +1,6 @@
 # Marzipan Platter
 ## tl;dr
-![Gifs are all the rage in Paris](https://github.com/biscuitehh/MarzipanPlatter/raw/master/assets/demo.gif)
+![Gifs are all the rage in Paris](https://github.com/biscuitehh/MarzipanPlatter/raw/master/assets/demo1.gif)
 
 ## Overview
 At WWDC 2018 Apple announced that they are working on a multi-year strategy to make it easier to port UIKit applications to the Mac. While some first-party applications such as the Home & News app are going to use this API in macOS 10.14, third-party developers won't have _official_ access for another year. As a result, I made this project to help tinkerers/other impatient people get a taste of what's to come when Apple gives everyone access to Marzipan next year.
