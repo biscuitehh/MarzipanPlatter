@@ -37,7 +37,6 @@
 		DCEB036B20CF8A000002FD0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DCEB036D20CF8A1E0002FD0B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DCEB036F20CF8ABB0002FD0B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Frameworks/WebKit.framework; sourceTree = "<group>"; };
-		DCF9DDCF20CA54E100479BDB /* change-link-type */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "change-link-type"; sourceTree = "<group>"; };
 		DCF9DDD020CA54E100479BDB /* update-swift-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "update-swift-frameworks.sh"; sourceTree = "<group>"; };
 		DCF9DDD120CA54E100479BDB /* ldwrap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ldwrap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +122,6 @@
 		DCF9DDCE20CA54E100479BDB /* scripts */ = {
 			isa = PBXGroup;
 			children = (
-				DCF9DDCF20CA54E100479BDB /* change-link-type */,
 				DCF9DDD020CA54E100479BDB /* update-swift-frameworks.sh */,
 				DCF9DDD120CA54E100479BDB /* ldwrap */,
 			);

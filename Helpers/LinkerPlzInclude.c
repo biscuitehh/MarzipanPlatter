@@ -6,6 +6,8 @@
 //  Copyright © 2018 Biscuit Labs. All rights reserved.
 //
 
+// For some reason I cannot remove all traces of AppKit from this project. As a result,
+// I had to stub out these symbols so the binary would run as expected.
 void _swift_FORCE_LOAD_$_swiftAppKit() {
     return;
 }
