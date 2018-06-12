@@ -210,7 +210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/scripts/update-swift-frameworks.sh\n# ~/bin/jtool -L ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n";
+			shellScript = "${PROJECT_DIR}/scripts/update-swift-frameworks.sh\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -353,7 +353,7 @@
 				CODE_SIGN_ENTITLEMENTS = MarzipanPlatter/MarzipanPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Y62QLUGWZC;
+				DEVELOPMENT_TEAM = 7W4JWFG7ZP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -384,7 +384,7 @@
 				CODE_SIGN_ENTITLEMENTS = MarzipanPlatter/MarzipanPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = Y62QLUGWZC;
+				DEVELOPMENT_TEAM = 7W4JWFG7ZP;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
