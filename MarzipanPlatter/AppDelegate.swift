@@ -24,9 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let secondVC = MapViewController.init(nibName: nil, bundle: nil)
         secondVC.tabBarItem = UITabBarItem(title: "Map View", image: nil, tag: 0)
 
+        // Web setup
+        let thirdVC = WebViewController.init(nibName: nil, bundle: nil)
+        thirdVC.tabBarItem = UITabBarItem(title: "Web View", image: nil, tag: 0)
+        
         // Setup RootViewController
         let rootViewController = UITabBarController(nibName: nil, bundle: nil)
-        rootViewController.viewControllers = [firstNavVC, secondVC]
+        rootViewController.viewControllers = [firstNavVC, secondVC, thirdVC]
         
         // Setup Window & go go go
         window = UIWindow(frame: UIScreen.main.bounds)

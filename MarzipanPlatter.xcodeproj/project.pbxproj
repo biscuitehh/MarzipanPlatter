@@ -14,6 +14,10 @@
 		DC77847320C8F2B400E9CC6C /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */; };
 		DCD82F1920C9014B00C2E2A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */; };
 		DCD82F1B20C901AF00C2E2A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */; };
+		DCEB036820CF88F10002FD0B /* LinkerPlzInclude.c in Sources */ = {isa = PBXBuildFile; fileRef = DCEB036720CF88F10002FD0B /* LinkerPlzInclude.c */; };
+		DCEB036C20CF8A000002FD0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEB036B20CF8A000002FD0B /* Foundation.framework */; };
+		DCEB036E20CF8A1E0002FD0B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEB036D20CF8A1E0002FD0B /* WebViewController.swift */; };
+		DCEB037020CF8ABB0002FD0B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEB036F20CF8ABB0002FD0B /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,13 @@
 		DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Frameworks/MapKit.framework; sourceTree = "<group>"; };
+		DCEB036720CF88F10002FD0B /* LinkerPlzInclude.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinkerPlzInclude.c; sourceTree = "<group>"; };
+		DCEB036B20CF8A000002FD0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCEB036D20CF8A1E0002FD0B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DCEB036F20CF8ABB0002FD0B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Frameworks/WebKit.framework; sourceTree = "<group>"; };
+		DCF9DDCF20CA54E100479BDB /* change-link-type */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "change-link-type"; sourceTree = "<group>"; };
+		DCF9DDD020CA54E100479BDB /* update-swift-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "update-swift-frameworks.sh"; sourceTree = "<group>"; };
+		DCF9DDD120CA54E100479BDB /* ldwrap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ldwrap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,8 +47,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEB036C20CF8A000002FD0B /* Foundation.framework in Frameworks */,
 				DC00150420C8DA3700800182 /* UIKit.framework in Frameworks */,
 				DCD82F1B20C901AF00C2E2A7 /* MapKit.framework in Frameworks */,
+				DCEB037020CF8ABB0002FD0B /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,8 +62,10 @@
 			children = (
 				DC252F5C20C8E34200FFEDEA /* README.md */,
 				DC252F5D20C8E36C00FFEDEA /* ExportOptions.plist */,
+				DCEB035B20CF80FB0002FD0B /* Helpers */,
 				DC0014F320C8D07600800182 /* MarzipanPlatter */,
 				DC0014F220C8D07600800182 /* Products */,
+				DCF9DDCE20CA54E100479BDB /* scripts */,
 				DC00150220C8DA3700800182 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +93,8 @@
 		DC00150220C8DA3700800182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCEB036F20CF8ABB0002FD0B /* WebKit.framework */,
+				DCEB036B20CF8A000002FD0B /* Foundation.framework */,
 				DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */,
 				DC00150320C8DA3700800182 /* UIKit.framework */,
 			);
@@ -90,8 +107,27 @@
 				DC00150820C8DBBD00800182 /* MasterTableViewController.swift */,
 				DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */,
 				DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */,
+				DCEB036D20CF8A1E0002FD0B /* WebViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DCEB035B20CF80FB0002FD0B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DCEB036720CF88F10002FD0B /* LinkerPlzInclude.c */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DCF9DDCE20CA54E100479BDB /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				DCF9DDCF20CA54E100479BDB /* change-link-type */,
+				DCF9DDD020CA54E100479BDB /* update-swift-frameworks.sh */,
+				DCF9DDD120CA54E100479BDB /* ldwrap */,
+			);
+			path = scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +140,7 @@
 				DC0014ED20C8D07600800182 /* Sources */,
 				DC0014EE20C8D07600800182 /* Frameworks */,
 				DC0014EF20C8D07600800182 /* Resources */,
+				DCBB0B7B20CA547F00714CDA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -126,6 +163,7 @@
 				TargetAttributes = {
 					DC0014F020C8D07600800182 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -158,11 +196,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DCBB0B7B20CA547F00714CDA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/biscuit/Code/MarzipanPlatter/scripts/update-swift-frameworks.sh\n# ~/bin/jtool -L ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC0014ED20C8D07600800182 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEB036820CF88F10002FD0B /* LinkerPlzInclude.c in Sources */,
+				DCEB036E20CF8A1E0002FD0B /* WebViewController.swift in Sources */,
 				DC0014F520C8D07600800182 /* AppDelegate.swift in Sources */,
 				DC77847320C8F2B400E9CC6C /* DetailTableViewController.swift in Sources */,
 				DC00150920C8DBBD00800182 /* MasterTableViewController.swift in Sources */,
@@ -290,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MarzipanPlatter/MarzipanPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -299,12 +361,19 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = MarzipanPlatter/Info.plist;
+				JTOOL_PATH = $HOME/bin/jtool;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OPTOOL_PATH = $HOME/bin/optool;
+				OTHER_LDFLAGS = "-fuse-ld=$(PROJECT_DIR)/scripts/ldwrap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitlabs.MarzipanPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -313,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MarzipanPlatter/MarzipanPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -322,12 +392,18 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = MarzipanPlatter/Info.plist;
+				JTOOL_PATH = $HOME/bin/jtool;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OPTOOL_PATH = $HOME/bin/optool;
+				OTHER_LDFLAGS = "-fuse-ld=$(PROJECT_DIR)/scripts/ldwrap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitlabs.MarzipanPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
