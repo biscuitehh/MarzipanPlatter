@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# A modified version of ldwrap from https://github.com/zhuowei/MarzipanTool
+
+from __future__ import print_function
+import sys
+import os
+import commands
+
+result = commands.getstatusoutput('xcrun -f ld')
+ld_command = result[1]
+
+i = 1
+while i < len(sys.argv):
+	option = sys.argv[i]
+	print(option + "\n", file=sys.stderr)
+	if option == "-macosx_version_min":
+		sys.argv[i] = "-iosmac_version_min"
+		sys.argv[i + 1] = "12.0"
+		continue
+	i += 1
+sys.argv.pop(0)
+print(sys.argv, file=sys.stderr)
+os.execv(ld_command, sys.argv)
