@@ -22,6 +22,7 @@ At WWDC 2018 Apple announced that they are working on a multi-year strategy to m
 ## Before Building/Running the project
 - Set the `JTOOL_PATH` and `OPTOOL_PATH` user-defined settings to the respective locations where you installed `jtool`/`optool` (listed in the requirements above). You can find the `JTOOL_PATH` & `OPTOOL_PATH` in the Build Settings of the Xcode project.
 - Ensure you've disabled SIP & set your `boot-args` to include `amfi_get_out_of_my_way=0x1`. Hopefully we can circumvent the entitlement check with a less brutish method in the near future.
+- If you're running this project from Xcode, uncheck the *Main Thread Checker* & uncheck *Enable backtrace recording* or else you'll get dyld errors when your app tries to launch.
 
 ## Build Release & Run (from the CLI)
 If you're running into _oh my goodness my Mac keeps dying_ issues when debugging, I've provided some simple instructions to create a release version of your Marzipan app.

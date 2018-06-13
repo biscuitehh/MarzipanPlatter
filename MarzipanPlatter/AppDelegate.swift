@@ -18,19 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Master Detail setup
         let firstVC = MasterTableViewController.init(style: .plain)
         let firstNavVC = UINavigationController(rootViewController: firstVC)
-        firstNavVC.tabBarItem = UITabBarItem(title: "Table View", image: nil, tag: 0)
+        firstNavVC.tabBarItem = UITabBarItem(title: "UIKit", image: nil, tag: 0)
 
         // Map setup
         let secondVC = MapViewController.init(nibName: nil, bundle: nil)
-        secondVC.tabBarItem = UITabBarItem(title: "Map View", image: nil, tag: 0)
+        secondVC.tabBarItem = UITabBarItem(title: "MapKit", image: nil, tag: 0)
 
         // Web setup
         let thirdVC = WebViewController.init(nibName: nil, bundle: nil)
-        thirdVC.tabBarItem = UITabBarItem(title: "Web View", image: nil, tag: 0)
+        thirdVC.tabBarItem = UITabBarItem(title: "WebKit", image: nil, tag: 0)
+        
+        // Video setup
+        let fourthVC = VideoViewController.init(nibName: nil, bundle: nil)
+        fourthVC.tabBarItem = UITabBarItem(title: "AVKit", image: nil, tag: 0)
         
         // Setup RootViewController
         let rootViewController = UITabBarController(nibName: nil, bundle: nil)
-        rootViewController.viewControllers = [firstNavVC, secondVC, thirdVC]
+        rootViewController.viewControllers = [firstNavVC, secondVC, thirdVC, fourthVC]
         
         // Setup Window & go go go
         window = UIWindow(frame: UIScreen.main.bounds)

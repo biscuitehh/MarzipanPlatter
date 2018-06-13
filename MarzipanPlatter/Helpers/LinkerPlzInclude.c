@@ -27,3 +27,7 @@ void _swift_FORCE_LOAD_$_swiftMapKit() {
 void _swift_FORCE_LOAD_$_swiftXPC() {
     return;
 }
+
+void _swift_FORCE_LOAD_$_swiftsimd() {
+    return;
+}

@@ -11,6 +11,8 @@
 		DC0014F720C8D07700800182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0014F620C8D07700800182 /* Assets.xcassets */; };
 		DC00150420C8DA3700800182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC00150320C8DA3700800182 /* UIKit.framework */; };
 		DC00150920C8DBBD00800182 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC00150820C8DBBD00800182 /* MasterTableViewController.swift */; };
+		DC26841920D0EDE0003AA32E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC26841820D0EDE0003AA32E /* AVKit.framework */; };
+		DC26841B20D0EE46003AA32E /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC26841A20D0EE46003AA32E /* VideoViewController.swift */; };
 		DC77847320C8F2B400E9CC6C /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */; };
 		DCD82F1920C9014B00C2E2A7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */; };
 		DCD82F1B20C901AF00C2E2A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */; };
@@ -30,6 +32,8 @@
 		DC00150820C8DBBD00800182 /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		DC252F5C20C8E34200FFEDEA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC252F5D20C8E36C00FFEDEA /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = "<group>"; };
+		DC26841820D0EDE0003AA32E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Frameworks/AVKit.framework; sourceTree = "<group>"; };
+		DC26841A20D0EE46003AA32E /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Frameworks/MapKit.framework; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 				DC00150420C8DA3700800182 /* UIKit.framework in Frameworks */,
 				DCD82F1B20C901AF00C2E2A7 /* MapKit.framework in Frameworks */,
 				DCEB037020CF8ABB0002FD0B /* WebKit.framework in Frameworks */,
+				DC26841920D0EDE0003AA32E /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +66,6 @@
 			children = (
 				DC252F5C20C8E34200FFEDEA /* README.md */,
 				DC252F5D20C8E36C00FFEDEA /* ExportOptions.plist */,
-				DCEB035B20CF80FB0002FD0B /* Helpers */,
 				DC0014F320C8D07600800182 /* MarzipanPlatter */,
 				DC0014F220C8D07600800182 /* Products */,
 				DCF9DDCE20CA54E100479BDB /* scripts */,
@@ -82,6 +86,7 @@
 			children = (
 				DC0014F420C8D07600800182 /* AppDelegate.swift */,
 				DC0014F620C8D07700800182 /* Assets.xcassets */,
+				DCEB035B20CF80FB0002FD0B /* Helpers */,
 				DC0014FB20C8D07700800182 /* Info.plist */,
 				DC0014FC20C8D07700800182 /* MarzipanPlatter.entitlements */,
 				DC00150520C8DB7500800182 /* View Controllers */,
@@ -92,6 +97,7 @@
 		DC00150220C8DA3700800182 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC26841820D0EDE0003AA32E /* AVKit.framework */,
 				DCEB036F20CF8ABB0002FD0B /* WebKit.framework */,
 				DCEB036B20CF8A000002FD0B /* Foundation.framework */,
 				DCD82F1A20C901AF00C2E2A7 /* MapKit.framework */,
@@ -107,6 +113,7 @@
 				DC77847220C8F2B400E9CC6C /* DetailTableViewController.swift */,
 				DCD82F1820C9014B00C2E2A7 /* MapViewController.swift */,
 				DCEB036D20CF8A1E0002FD0B /* WebViewController.swift */,
+				DC26841A20D0EE46003AA32E /* VideoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -221,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCEB036820CF88F10002FD0B /* LinkerPlzInclude.c in Sources */,
+				DC26841B20D0EE46003AA32E /* VideoViewController.swift in Sources */,
 				DCEB036E20CF8A1E0002FD0B /* WebViewController.swift in Sources */,
 				DC0014F520C8D07600800182 /* AppDelegate.swift in Sources */,
 				DC77847320C8F2B400E9CC6C /* DetailTableViewController.swift in Sources */,
@@ -353,7 +361,7 @@
 				CODE_SIGN_ENTITLEMENTS = MarzipanPlatter/MarzipanPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 7W4JWFG7ZP;
+				DEVELOPMENT_TEAM = Y62QLUGWZC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -384,7 +392,7 @@
 				CODE_SIGN_ENTITLEMENTS = MarzipanPlatter/MarzipanPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 7W4JWFG7ZP;
+				DEVELOPMENT_TEAM = Y62QLUGWZC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
