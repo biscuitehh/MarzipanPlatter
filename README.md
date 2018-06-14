@@ -7,7 +7,7 @@ At WWDC 2018 Apple announced that they are working on a multi-year strategy to m
 
 ## Requirements/Notes
 - macOS 10.14 Mojave & Xcode 10 (note: apparently Virtual Machines *do not* work with Marzipan, so you'll need a real Mac/Hackintosh to make magic happen)
-- Disabling SIP & adding the `amfi_get_out_of_my_way=0x1` to your `boot-args`.
+- Disabling SIP & adding the `amfi_get_out_of_my_way=0x1` to your `boot-args` (Hopefully we can circumvent the entitlement check with a less brutish method in the near future)
 - Requires [jtool](http://www.newosxbook.com/tools/jtool.html) to parse the MachO loader commands.
 - Requires [optool](https://github.com/alexzielenski/optool) to edit the MachO header of our _almost_ final product.
 - Patience
@@ -19,10 +19,21 @@ At WWDC 2018 Apple announced that they are working on a multi-year strategy to m
 - Seems to crash my debugger/Mac a lot (not sure if this is a me or a Mojave beta issue)
 - The `UIKitSystem` process doesn't usually stop running when you stop debugging your app. It's best if you leave `sshd` open (I mean we already killed code signing, what's the worst that could happen) and connected so you can kill `UIKitSystem` if your development machine locks up. Thanks goes to [@stroughtonsmith](https://twitter.com/stroughtonsmith) and [@_inside](https://twitter.com/_inside) for the gnarly tip!
 
-## Before Building/Running the project
-- Set the `JTOOL_PATH` and `OPTOOL_PATH` user-defined settings to the respective locations where you installed `jtool`/`optool` (listed in the requirements above). You can find the `JTOOL_PATH` & `OPTOOL_PATH` in the Build Settings of the Xcode project.
-- Ensure you've disabled SIP & set your `boot-args` to include `amfi_get_out_of_my_way=0x1`. Hopefully we can circumvent the entitlement check with a less brutish method in the near future.
-- If you're running this project from Xcode, uncheck the *Main Thread Checker* & uncheck *Enable backtrace recording* or else you'll get dyld errors when your app tries to launch.
+## Build instructions
+- Install Xcode 10, go to Preferences -> Locations -> select Xcode 10 for Command Line Tools
+- Disable SIP and AMFI:
+  - boot into Recovery Mode (hold Cmd+R while rebooting), open Terminal from menu bar
+  - `csrutil disable`
+  - `nvram boot-args="amfi_get_out_of_my_way=0x1"`
+- Get jtool and optool:
+  - [Download jtool binary](http://www.newosxbook.com/tools/jtool.tar)
+  - `git clone --recurse-submodules https://github.com/alexzielenski/optool.git`
+  - open `optool/optool.xcodeproj`, hit Build
+- Configure Xcode project
+  - Open `MarzipanPlatter/MarzipanPlatter.xcodeproj`, go to MarzipanPlatter in sidebar -> MarzipanPlatter target -> General
+  - Change Signing -> Team to your team, let Xcode regenerate provisioning profiles
+  - Go to Build Settings tab, and set the `JTOOL_PATH` and `OPTOOL_PATH` user-defined settings to the respective locations where you installed `jtool`/`optool`
+ - Hit Run (or use the CLI method below)
 
 ## Build Release & Run (from the CLI)
 If you're running into _oh my goodness my Mac keeps dying_ issues when debugging, I've provided some simple instructions to create a release version of your Marzipan app.
@@ -35,6 +46,11 @@ To export the `.app` from the archive:
 
 To run `MarzipanPlatter` with the useful `CFMZEnabled` environment variable:
 `./build/MarzipanPlatter.app/Contents/MacOS/MarzipanPlatter`
+
+Or just use this one-liner:
+```
+xcodebuild archive -scheme MarzipanPlatter -archivePath ./build/MarzipanPlatter.xcarchive && xcodebuild -exportArchive -archivePath ./build/MarzipanPlatter.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath ./build/ && ./build/MarzipanPlatter.app/Contents/MacOS/MarzipanPlatter
+```
 
 ## TODO
 - [ ] find a better way to run Marzipan apps without disabling important things like AMFI/SIP.
