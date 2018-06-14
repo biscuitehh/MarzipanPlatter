@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+# A modified version of ldwrap from https://github.com/zhuowei/MarzipanTool
+# This ldwrap handles the macOS side of things.
+
+from __future__ import print_function
+import sys
+import os
+import commands
+
+result = commands.getstatusoutput('xcrun -f ld')
+ld_command = result[1]
+
+sys.argv.pop(0)
+print(sys.argv, file=sys.stderr)
+os.execv(ld_command, sys.argv)

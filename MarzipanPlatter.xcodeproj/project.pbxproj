@@ -367,13 +367,14 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = MarzipanPlatter/Info.plist;
+				IOSMAC_PLATFORM_NAME = iosmac;
 				JTOOL_PATH = $HOME/bin/jtool;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				OPTOOL_PATH = $HOME/bin/optool;
-				OTHER_LDFLAGS = "-fuse-ld=$(PROJECT_DIR)/scripts/ldwrap";
+				OTHER_LDFLAGS = "-fuse-ld=$(PROJECT_DIR)/scripts/ldwrap-$(IOSMAC_PLATFORM_NAME)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitlabs.MarzipanPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -398,13 +399,14 @@
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = MarzipanPlatter/Info.plist;
+				IOSMAC_PLATFORM_NAME = iosmac;
 				JTOOL_PATH = $HOME/bin/jtool;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				OPTOOL_PATH = $HOME/bin/optool;
-				OTHER_LDFLAGS = "-fuse-ld=$(PROJECT_DIR)/scripts/ldwrap";
+				OTHER_LDFLAGS = "-fuse-ld=$(PROJECT_DIR)/scripts/ldwrap-$(IOSMAC_PLATFORM_NAME)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitlabs.MarzipanPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

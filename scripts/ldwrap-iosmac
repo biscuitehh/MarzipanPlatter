@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # A modified version of ldwrap from https://github.com/zhuowei/MarzipanTool
+# This ldwrap handles the iOSMac side of things.
 
 from __future__ import print_function
 import sys

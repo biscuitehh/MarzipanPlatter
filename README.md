@@ -33,6 +33,7 @@ At WWDC 2018 Apple announced that they are working on a multi-year strategy to m
   - Open `MarzipanPlatter/MarzipanPlatter.xcodeproj`, go to MarzipanPlatter in sidebar -> MarzipanPlatter target -> General
   - Change Signing -> Team to your team, let Xcode regenerate provisioning profiles
   - Go to Build Settings tab, and set the `JTOOL_PATH` and `OPTOOL_PATH` user-defined settings to the respective locations where you installed `jtool`/`optool`
+  - Also, you can set the `IOSMAC_PLATFORM_NAME` user-definied setting to either `iosmac` or `macos`. `iosmac` will use the linking magic to create an `iOSMac` binary and `macos` will create a patched `macOS` binary that requires the `CFMZEnabled=1` environment variable to be set before launching the app. However, you can also link things like `AppKit` with a `macOS` binary.
  - Hit Run (or use the CLI method below)
 
 ## Build Release & Run (from the CLI)

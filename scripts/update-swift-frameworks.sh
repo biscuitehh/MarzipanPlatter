@@ -4,6 +4,10 @@
 ## There has got to be a better way to do this, but xcodebuild doesn't really let you get in the way
 ## of certain build steps, which is a huge bummer :(
 
+if [[ ${IOSMAC_PLATFORM_NAME} = 'macos' ]]; then
+	exit 0
+fi
+
 mkdir -p ${TARGET_BUILD_DIR}/TempFrameworks
 
 # Run swiftStdLibTool to determine the frameworks iOS would need _if_ we were an iOS app
